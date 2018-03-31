@@ -17,7 +17,7 @@ client.on('message', message => {
     var re =  /[-a-zA-Z0-9@:%_\+.~#?&  =]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&  =]*)?/gi.exec(message.cleanContent);
     if(re != null){
         message.delete().then(message => {
-            message.channel.send('You may not advertise here! Advertise in #showcase');
+            message.author.send('Sorry, you cannot include links in your messages - You should advertise only in #showcase');
         });
     }
 });
@@ -28,10 +28,10 @@ client.on('message', msg => {
   const embed = new Discord.RichEmbed()
   .setTitle("GOOD VYBZ CLEAR")
   .setAuthor("Created by Panayiotis", "https://cdn.discordapp.com/avatars/405783458619850782/d0d496048d2718a939e8bb82f4a8618c.png?size=128")
-  .addField(">clear 10", "Clears 10 Messages")
-  .addField(">clear 20", "Clears 20 Messages")
-  .addField(">clear 50", "Clears 50 Messages")
-  .addField(">clear 100", "Clears 100 Messages")
+  .addField("!clear 10", "Clears 10 Messages")
+  .addField("!clear 20", "Clears 20 Messages")
+  .addField("!clear 50", "Clears 50 Messages")
+  .addField("!clear 100", "Clears 100 Messages")
   .setColor(0xb30000)
   .setThumbnail("http://i.imgur.com/rtCnCW3.png")
     msg.channel.send({embed})
