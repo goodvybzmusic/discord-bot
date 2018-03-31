@@ -5,7 +5,7 @@ client.on('ready', () => {
 	client.user.setPresence({
 		game: {
 			name: `Good Vybz`, // Change what the bot is watching or playing.
-			type: 2 // 0 for playing, 1 for streaming, 2 for listening and 3 for watching.
+			type: 3 // 0 for playing, 1 for streaming, 2 for listening and 3 for watching.
 		}
 	});
 	console.log('I am ready!');
